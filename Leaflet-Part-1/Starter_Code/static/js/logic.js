@@ -79,7 +79,7 @@ function getData(data)
   
  var legend = L.control({position: 'bottomright'});
  legend.onAdd = function (map) {
-  var div = L.DomUtil.create('div', 'infolegend');
+  var div = L.DomUtil.create('div', 'info legend');
   //loop through items and generate legend
   for (var i = 0; i < breaks.length; i++) {
   div.innterHTML += '<i style="background:' +  getColor(breaks[i]) + ' "></i> ' + labels[i] + (breaks ? ' ' + '<br>' : '');
@@ -87,6 +87,8 @@ function getData(data)
   return div;
  };
  legend.addTo(map);
+
+
 }
 
  
